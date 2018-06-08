@@ -36,7 +36,12 @@
         defaultExtension: 'js'
       },
       rxjs: {
+        "main": "index.js",  
         defaultExtension: 'js'
+      },
+      "rxjs/operators" : {
+        "main": "index.js",
+        "defaultExtension": "js"
       },
       'socket.io-client': {
         main: 'socket.io.js'

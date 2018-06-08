@@ -9,7 +9,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('copy:libs', function (done) {
-    sequence('clean', 'copy:vendor', 'copy:rxjs', 'copy:angular', 'copy:bootstrap', 'copy:socketIO', done);
+    sequence('clean', 'copy:vendor', 'copy:rxjs', 'copy:rxjs-compat', 'copy:angular', 'copy:bootstrap', 'copy:socketIO', done);
 });
 
 gulp.task('copy:vendor', function() {
@@ -27,6 +27,12 @@ gulp.task('copy:rxjs', function() {
   return gulp
     .src([nodeModulesPath + '/rxjs/**/*'])
     .pipe(gulp.dest(libPath + '/rxjs'));
+});
+
+gulp.task('copy:rxjs-compat', function() {
+  return gulp
+    .src([nodeModulesPath + '/rxjs-compat/**/*'])
+    .pipe(gulp.dest(libPath + '/rxjs-compat'));
 });
 
 gulp.task('copy:angular', function() {

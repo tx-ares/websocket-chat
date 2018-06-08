@@ -12,3 +12,5 @@ _temp
 CHANGELOG.md
 app/**/*.js
 app/**/*.js.map
+
+public/lib/

@@ -10,33 +10,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var io = require("socket.io-client");
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
-        this.socket = io.connect();
+    function HomeComponent(private, SocketService) {
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.socket.emit('event1', {
+        this._socketService.emit('event1', {
             msg: 'Client to server, can you hear me server?'
         });
-        this.socket.on('event2', function (data) {
+        this._socketService.on('event2', function (data) {
             console.log(data.msg, " << msg from event2");
-            _this.socket.emit('event3', {
+            _this._socketService.emit('event3', {
                 msg: "Yes, all systems GO!"
             });
         });
-        this.socket.on('event4', function (data) {
+        this._socketService.on('event4', function (data) {
             console.log(data.msg, " << msg from event4");
         });
     };
+    var _a;
     HomeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'ng-home',
+            styleUrls: ['home.styles.css'],
             templateUrl: 'home.template.html'
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof _socketService !== "undefined" && _socketService) === "function" && _a || Object, Object])
     ], HomeComponent);
     return HomeComponent;
 }());

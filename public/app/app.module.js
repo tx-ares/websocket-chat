@@ -13,6 +13,7 @@ var app_routing_1 = require("./app.routing");
 var app_component_1 = require("./app.component");
 var home_component_1 = require("./home/home.component");
 var nav_component_1 = require("./nav/nav.component");
+var socket_service_1 = require("./shared/socket.service");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -26,7 +27,7 @@ var AppModule = /** @class */ (function () {
                 home_component_1.HomeComponent,
                 nav_component_1.NavbarComponent
             ],
-            providers: [],
+            providers: [socket_service_1.SocketService],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

@@ -1,5 +1,5 @@
 /**
- * System configuration for Angular 2 samples
+ * System configuration for Angular 6 samples
  * Adjust as necessary for your application needs.
  */
 (function (global) {
@@ -36,7 +36,7 @@
         defaultExtension: 'js'
       },
       rxjs: {
-        "main": "index.js",  
+        "main": "index.js",
         defaultExtension: 'js'
       },
       "rxjs/operators" : {

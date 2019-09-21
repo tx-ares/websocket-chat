@@ -27,7 +27,7 @@
     "@angular/router": "^6.0.3",
     "@angular/upgrade": "^2.4.9",
     "angular-in-memory-web-api": "~0.2.4",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "core-js": "^2.4.1",
     "express": "^4.13.4",
     "path": "^0.12.7",

@@ -45,7 +45,7 @@
     "@types/jasmine": "2.5.36",
     "@types/socket.io-client": "1.4.29",
     "del": "^2.2.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "run-sequence": "^1.2.2"
   },
   "repository": {}
